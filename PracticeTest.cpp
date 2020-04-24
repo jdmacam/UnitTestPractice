@@ -86,7 +86,7 @@ TEST(PracticeTest, special_char_not_a_palindrome)
 }
 
 //sortDescending Tests
-TEST(PracticeTest, three_unique)
+TEST(PracticeTest, ascending)
 {
     Practice obj;
 		int a = 1;
@@ -95,5 +95,77 @@ TEST(PracticeTest, three_unique)
     obj.sortDescending(a, b, c);
     ASSERT_TRUE(a == 3);
 		ASSERT_TRUE(b == 2);
+		ASSERT_TRUE(c == 1);
+}
+
+TEST(PracticeTest, descending)
+{
+    Practice obj;
+		int a = 3;
+		int b = 2;
+		int c = 1;
+    obj.sortDescending(a, b, c);
+    ASSERT_TRUE(a == 3);
+		ASSERT_TRUE(b == 2);
+		ASSERT_TRUE(c == 1);
+}
+
+TEST(PracticeTest, triplets)
+{
+    Practice obj;
+		int a = 1;
+		int b = 1;
+		int c = 1;
+    obj.sortDescending(a, b, c);
+    ASSERT_TRUE(a == 1);
+		ASSERT_TRUE(b == 1);
+		ASSERT_TRUE(c == 1);
+}
+
+TEST(PracticeTest, pair1_asc)
+{
+    Practice obj;
+		int a = 1;
+		int b = 1;
+		int c = 3;
+    obj.sortDescending(a, b, c);
+    ASSERT_TRUE(a == 3);
+		ASSERT_TRUE(b == 1);
+		ASSERT_TRUE(c == 1);
+}
+
+TEST(PracticeTest, pair1_desc)
+{
+    Practice obj;
+		int a = 3;
+		int b = 3;
+		int c = 1;
+    obj.sortDescending(a, b, c);
+    ASSERT_TRUE(a == 3);
+		ASSERT_TRUE(b == 3);
+		ASSERT_TRUE(c == 1);
+}
+
+TEST(PracticeTest, pair2_asc)
+{
+    Practice obj;
+		int a = 1;
+		int b = 3;
+		int c = 3;
+    obj.sortDescending(a, b, c);
+    ASSERT_TRUE(a == 3);
+		ASSERT_TRUE(b == 3);
+		ASSERT_TRUE(c == 1);
+}
+
+TEST(PracticeTest, pair2_desc)
+{
+    Practice obj;
+		int a = 3;
+		int b = 1;
+		int c = 1;
+    obj.sortDescending(a, b, c);
+    ASSERT_TRUE(a == 3);
+		ASSERT_TRUE(b == 1);
 		ASSERT_TRUE(c == 1);
 }
