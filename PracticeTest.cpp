@@ -14,6 +14,7 @@ class PracticeTest : public ::testing::Test
 		virtual void TearDown(){} //clean up after each test, (before destructor)
 };
 
+//isPalindrome tests
 TEST(PracticeTest, is_simple_palindrome)
 {
     Practice obj;
@@ -75,4 +76,17 @@ TEST(PracticeTest, special_char_not_palindrome)
     Practice obj;
     bool actual = obj.isPalindrome("{[}");
     ASSERT_FALSE(actual);
+}
+
+//sortDescending Tests
+TEST(PracticeTest, three_unique)
+{
+    Practice obj;
+		int a = 1;
+		int b = 2;
+		int c = 3;
+    bool actual = obj.sortDescending(a,b,c);
+    ASSERT_TRUE(a > b && a > c);
+		ASSERT_TRUE(b < a && b > c);
+		ASSERT_TRUE(c < a && c < b);
 }
