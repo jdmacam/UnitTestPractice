@@ -21,6 +21,6 @@ TEST(PracticeTest, is_simple_palindrome)
     ASSERT_TRUE(actual);
 
 		actual = obj.isPalindrome("Ba");
-    ASSERT_TRUE(actual);
+    ASSERT_FALSE(actual);
 
 }
