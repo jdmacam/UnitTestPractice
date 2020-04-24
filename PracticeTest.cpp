@@ -42,20 +42,6 @@ TEST(PracticeTest, def_not_a_palindrome)
     ASSERT_FALSE(actual);
 }
 
-TEST(PracticeTest, null_test)
-{
-    Practice obj;
-    bool actual = obj.isPalindrome("a\0aa");
-    ASSERT_FALSE(actual);
-}
-
-TEST(PracticeTest, big_null_palindrome)
-{
-    Practice obj;
-    bool actual = obj.isPalindrome("a\0bcdefgh");
-    ASSERT_FALSE(actual);
-}
-
 TEST(PracticeTest, even_num_palindrome)
 {
     Practice obj;
@@ -75,4 +61,18 @@ TEST(PracticeTest, spaces_palindrome)
     Practice obj;
     bool actual = obj.isPalindrome("2 2");
     ASSERT_TRUE(actual);
+}
+
+TEST(PracticeTest, special_char_palindrome)
+{
+    Practice obj;
+    bool actual = obj.isPalindrome("{[]}");
+    ASSERT_TRUE(actual);
+}
+
+TEST(PracticeTest, special_char_not_palindrome)
+{
+    Practice obj;
+    bool actual = obj.isPalindrome("{[}");
+    ASSERT_FALSE(actual);
 }
