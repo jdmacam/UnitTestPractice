@@ -55,3 +55,24 @@ TEST(PracticeTest, big_null_palindrome)
     bool actual = obj.isPalindrome("a\0bcdefgh");
     ASSERT_FALSE(actual);
 }
+
+TEST(PracticeTest, even_num_palindrome)
+{
+    Practice obj;
+    bool actual = obj.isPalindrome("212");
+    ASSERT_TRUE(actual);
+}
+
+TEST(PracticeTest, odd_num_palindrome)
+{
+    Practice obj;
+    bool actual = obj.isPalindrome("2112");
+    ASSERT_TRUE(actual);
+}
+
+TEST(PracticeTest, spaces_palindrome)
+{
+    Practice obj;
+    bool actual = obj.isPalindrome("2 2");
+    ASSERT_TRUE(actual);
+}
