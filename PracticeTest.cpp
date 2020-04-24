@@ -21,9 +21,37 @@ TEST(PracticeTest, is_simple_palindrome)
     ASSERT_TRUE(actual);
 }
 
-TEST(PracticeTest, is_not_a_palindrome)
+TEST(PracticeTest, odd_palindrome)
 {
     Practice obj;
-    bool actual = obj.isPalindrome("Ba");
+    bool actual = obj.isPalindrome("bab");
+    ASSERT_TRUE(actual);
+}
+
+TEST(PracticeTest, even_palindrome)
+{
+    Practice obj;
+    bool actual = obj.isPalindrome("baab");
+    ASSERT_TRUE(actual);
+}
+
+TEST(PracticeTest, def_not_a_palindrome)
+{
+    Practice obj;
+    bool actual = obj.isPalindrome("12345");
+    ASSERT_FALSE(actual);
+}
+
+TEST(PracticeTest, null_test)
+{
+    Practice obj;
+    bool actual = obj.isPalindrome("a\0aa");
+    ASSERT_FALSE(actual);
+}
+
+TEST(PracticeTest, big_null_palindrome)
+{
+    Practice obj;
+    bool actual = obj.isPalindrome("a\0bcdefgh");
     ASSERT_FALSE(actual);
 }
