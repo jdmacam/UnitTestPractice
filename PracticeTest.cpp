@@ -64,17 +64,24 @@ TEST(PracticeTest, spaces_palindrome)
     ASSERT_TRUE(actual);
 }
 
-TEST(PracticeTest, special_char_palindrome)
+TEST(PracticeTest, looks_like_a_palindrome)
 {
     Practice obj;
     bool actual = obj.isPalindrome("{[]}");
+    ASSERT_FALSE(actual);
+}
+
+TEST(PracticeTest, special_char_palindrome)
+{
+    Practice obj;
+    bool actual = obj.isPalindrome("{[{");
     ASSERT_TRUE(actual);
 }
 
-TEST(PracticeTest, special_char_not_palindrome)
+TEST(PracticeTest, special_char_not_a_palindrome)
 {
     Practice obj;
-    bool actual = obj.isPalindrome("{[}");
+    bool actual = obj.isPalindrome("{[");
     ASSERT_FALSE(actual);
 }
 
