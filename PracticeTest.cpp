@@ -86,7 +86,7 @@ TEST(PracticeTest, three_unique)
 		int b = 2;
 		int c = 3;
     obj.sortDescending(a, b, c);
-    ASSERT_TRUE(a > b && a > c);
-		ASSERT_TRUE(b < a && b > c);
-		ASSERT_TRUE(c < a && c < b);
+    ASSERT_TRUE(a == 3);
+		ASSERT_TRUE(b == 2);
+		ASSERT_TRUE(c == 1);
 }
