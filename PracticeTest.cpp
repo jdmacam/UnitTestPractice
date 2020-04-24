@@ -82,10 +82,8 @@ TEST(PracticeTest, special_char_not_palindrome)
 TEST(PracticeTest, three_unique)
 {
     Practice obj;
-		int a = 1;
-		int b = 2;
-		int c = 3;
-    obj.sortDescending(a,b,c);
+		int a,b,c;
+    obj.sortDescending(a=1,b=2,c=3);
     ASSERT_TRUE(a > b && a > c);
 		ASSERT_TRUE(b < a && b > c);
 		ASSERT_TRUE(c < a && c < b);
