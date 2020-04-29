@@ -84,8 +84,16 @@ TEST(PracticeTest, special_char_not_a_palindrome)
     bool actual = obj.isPalindrome("{[");
     ASSERT_FALSE(actual);
 }
-
+TEST(PracticeTest, capital_and_lowercase_palindrome)
+{
+	Practice obj;
+	bool actual = obj.isPalindrome("Aaa");
+	ASSERT_TRUE(actual);
+}
+/* ================================*/
 //sortDescending Tests
+/* ================================*/
+
 TEST(PracticeTest, ascending)
 {
     Practice obj;
